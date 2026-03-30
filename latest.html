@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Scream-2026-03-30</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #0a0a0f;
+            min-height: 100vh;
+            padding: 24px 16px;
+        }
+        .container { max-width: 960px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            padding: 48px 0 36px;
+            color: white;
+        }
+        .header .logo { font-size: 56px; margin-bottom: 8px; }
+        .header h1 {
+            font-size: 2.6em;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+        .header .subtitle {
+            font-size: 1.05em;
+            opacity: 0.9;
+            margin-top: 10px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 18px;
+        }
+        .stat {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+        @media (max-width: 640px) {
+            .cards-grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.8em; }
+            .header .logo { font-size: 42px; }
+            .stats { gap: 12px; }
+        }
+        .card {
+            background: #16161e;
+            border-radius: 20px;
+            padding: 22px 24px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.5);
+            border-color: rgba(255,255,255,0.12);
+        }
+        .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; align-items: center; }
+        .tag {
+            font-size: 11px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .tag-llm { background: #e8f0fe; color: #1a73e8; }
+        .tag-biz { background: #fce8e6; color: #d93025; }
+        .tag-open { background: #e6f4ea; color: #137333; }
+        .tag-policy { background: #e8f0fe; color: #1a73e8; }
+        .tag-product { background: #f3e8fd; color: #7c3aed; }
+        .tag-research { background: #e0f7fa; color: #00838f; }
+        .tag-other { background: #f5f5f5; color: #666666; }
+        .tag-emoji {
+            font-size: 16px;
+            line-height: 1;
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #e8e8ed;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .card-title .carrot { margin-right: 4px; }
+        .card-summary {
+            font-size: 13.5px;
+            color: #a0a0b0;
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #aaa;
+        }
+        .card-source {
+            background: #1e1e2a;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            color: #6a6a80;
+        }
+        .card-arrow {
+            color: #6a6a80;
+            font-size: 14px;
+        }
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.35);
+            padding: 36px 0;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🥕</div>
+            <h1>AI-Scream-2026-03-30</h1>
+            <div class="subtitle">每日AI行业资讯精选 | 用最少的时间掌握最新动态</div>
+            <div class="stats">
+                <span class="stat">10 条精选</span>
+                <span class="stat">来源 TechCrunch / HN / TLDR</span>
+            </div>
+        </div>
+        <div class="cards-grid">
+            <a class="card" href="https://github.com/ghostwright/phantom" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-open">开源</span><span class="tag tag-llm">Agent</span></div>
+                <div class="card-title">开源AI代理Phantom上线：自我配置的虚拟机</div>
+                <div class="card-summary">Phantom是一个开源AI代理，运行在独立虚拟机上，并能自动重写其配置文件，展示了AI技术在自动化运维中的应用。</div>
+                <div class="card-meta">
+                    <span class="card-source">Hacker News</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://techcrunch.com/2026/03/30/scaleops-130m-series-c-kubernetes-efficiency-ai-demand-funding/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">💰</span> <span class="tag tag-biz">融资</span><span class="tag tag-other">基础设施</span></div>
+                <div class="card-title">ScaleOps筹集1.3亿美元以应对AI需求增长</div>
+                <div class="card-summary">ScaleOps通过自动化基础设施管理来解决GPU短缺和云成本问题，为应对AI计算效率挑战提供了新方案。</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://techcrunch.com/2026/03/30/ai-chip-startup-rebellions-raises-400-million-at-2-3b-valuation-in-pre-ipo-round/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🔥</span> <span class="tag tag-biz">融资</span><span class="tag tag-other">基础设施</span></div>
+                <div class="card-title">Rebellions AI芯片公司筹集4亿美元估值23亿</div>
+                <div class="card-summary">Rebellions设计专门用于AI推理的芯片，计划上市，成为Nvidia在该领域的有力竞争者之一。</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://techcrunch.com/2026/03/30/mistral-ai-raises-830m-in-debt-to-set-up-a-data-center-near-paris/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🌍</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-other">基础设施</span></div>
+                <div class="card-title">Mistral AI筹7000万美元建巴黎数据中心</div>
+                <div class="card-summary">Mistral计划2026年第二季度运营新数据中心，旨在缓解AI计算需求下的资源紧张问题。</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://techcrunch.com/2026/03/30/qodo-bets-on-code-verification-as-ai-coding-scales-raises-70m/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🔍</span> <span class="tag tag-biz">融资</span></div>
+                <div class="card-title">Qodo筹集7000万美元验证代码质量</div>
+                <div class="card-summary">随着AI生成大量代码，Qodo致力于确保这些代码的正确性，为软件开发带来新的挑战与机遇。</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🚨</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-product">产品</span></div>
+                <div class="card-title">OpenAI关停Sora：成本与用户数不符</div>
+                <div class="card-summary">Sora上线半年后被关闭，全球用户骤降至50万以下，日耗资100万美元，揭示了视频生成领域的真实困境。</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://techcrunch.com/2026/03/29/soras-shutdown-could-be-a-reality-check-moment-for-ai-video/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🎥</span> <span class="tag tag-product">创作</span></div>
+                <div class="card-title">Sora关停或预示AI视频行业调整</div>
+                <div class="card-summary">Sora的关闭引发了对AI生成视频行业的反思，是否将出现更广泛的撤退？</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://techcrunch.com/2026/03/28/bluesky-leans-into-ai-with-attie-an-app-for-building-custom-feeds/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🌐</span> <span class="tag tag-other">AI</span></div>
+                <div class="card-title">Bluesky推出AI驱动的应用Attie</div>
+                <div class="card-summary">Bluesky利用AI帮助用户构建个性化信息流，展示了社交网络在开放协议下的新应用。</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://techcrunch.com/2026/03/28/stanford-study-outlines-dangers-of-asking-ai-chatbots-for-personal-advice/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🤔</span> <span class="tag tag-research">研究</span></div>
+                <div class="card-title">斯坦福研究警告：向AI寻求个人建议风险大</div>
+                <div class="card-summary">斯坦福大学研究发现，依赖AI获取个人建议可能带来潜在危害，提醒用户注意隐私安全问题。</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">📈</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span></div>
+                <div class="card-title">Anthropic Claude用户数量激增</div>
+                <div class="card-summary">Anthropic的付费用户Claude使用量急剧上升，但具体数字尚未公布，显示AI消费市场潜力巨大。</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+        </div>
+        <div class="footer">
+            🥕 由 AI-Scream 自动生成 | 2026-03-30
+        </div>
+    </div>
+</body>
+</html>
