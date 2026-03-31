@@ -11,269 +11,232 @@
             background: #0a0a0f;
             min-height: 100vh;
             padding: 24px 16px;
+            color: #e8e8ed;
         }
         .container { max-width: 960px; margin: 0 auto; }
         .header {
             text-align: center;
-            padding: 48px 0 36px;
-            color: white;
+            padding: 48px 0 28px;
         }
         .header .logo { font-size: 56px; margin-bottom: 8px; }
         .header h1 {
-            font-size: 2.6em;
+            font-size: 2.4em;
             font-weight: 800;
             letter-spacing: 2px;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #ff6b35, #ffa751);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .header .subtitle {
-            font-size: 1.05em;
-            opacity: 0.9;
+            font-size: 1em;
+            color: rgba(255,255,255,0.5);
             margin-top: 10px;
-            font-weight: 400;
-            letter-spacing: 1px;
         }
-        .stats {
+        /* 页签 */
+        .tabs {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 18px;
+            gap: 0;
+            margin: 24px 0 20px;
         }
-        .stat {
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(10px);
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 13px;
-            color: rgba(255,255,255,0.7);
+        .tab {
+            padding: 10px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: transparent;
+            color: rgba(255,255,255,0.4);
+            transition: all 0.2s;
         }
-        .stat-domestic { border: 1px solid rgba(207,19,34,0.3); }
-        .stat-international { border: 1px solid rgba(0,80,179,0.3); }
+        .tab:first-child { border-radius: 12px 0 0 12px; }
+        .tab:last-child { border-radius: 0 12px 12px 0; }
+        .tab.active {
+            background: rgba(255,107,53,0.15);
+            color: #ff6b35;
+            border-color: rgba(255,107,53,0.3);
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-count {
+            font-size: 12px;
+            background: rgba(255,255,255,0.1);
+            padding: 1px 8px;
+            border-radius: 10px;
+            margin-left: 6px;
+        }
+        .tab.active .tab-count {
+            background: rgba(255,107,53,0.2);
+        }
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
+            gap: 16px;
         }
         @media (max-width: 640px) {
             .cards-grid { grid-template-columns: 1fr; }
-            .header h1 { font-size: 1.8em; }
+            .header h1 { font-size: 1.6em; }
             .header .logo { font-size: 42px; }
-            .stats { gap: 8px; }
+            .tab { padding: 8px 20px; font-size: 13px; }
         }
         .card {
             background: #16161e;
-            border-radius: 20px;
-            padding: 22px 24px;
-            box-shadow: 0 2px 16px rgba(0,0,0,0.3);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border-radius: 16px;
+            padding: 20px 22px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
             cursor: pointer;
             text-decoration: none;
             color: inherit;
             display: block;
-            border: 1px solid rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.05);
         }
         .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 36px rgba(0,0,0,0.5);
-            border-color: rgba(255,255,255,0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.5);
+            border-color: rgba(255,107,53,0.2);
         }
-        .card-domestic { border-left: 3px solid rgba(207,19,34,0.5); }
-        .card-international { border-left: 3px solid rgba(0,80,179,0.5); }
-        .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; align-items: center; }
+        .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; align-items: center; }
         .tag {
             font-size: 11px;
-            padding: 4px 12px;
-            border-radius: 20px;
+            padding: 3px 10px;
+            border-radius: 16px;
             font-weight: 600;
-            letter-spacing: 0.3px;
         }
-        .tag-llm { background: #e8f0fe; color: #1a73e8; }
-        .tag-biz { background: #fce8e6; color: #d93025; }
-        .tag-open { background: #e6f4ea; color: #137333; }
-        .tag-policy { background: #e8f0fe; color: #1a73e8; }
-        .tag-product { background: #f3e8fd; color: #7c3aed; }
-        .tag-research { background: #e0f7fa; color: #00838f; }
-        .tag-other { background: #f5f5f5; color: #666666; }
-        .tag-domestic { background: #fff0f6; color: #c41d7f; }
-        .tag-emoji {
-            font-size: 16px;
-            line-height: 1;
-        }
+        .tag-llm { background: rgba(26,115,232,0.15); color: #6ab0ff; }
+        .tag-biz { background: rgba(217,48,37,0.15); color: #ff7875; }
+        .tag-open { background: rgba(19,115,51,0.15); color: #73d897; }
+        .tag-policy { background: rgba(26,115,232,0.15); color: #6ab0ff; }
+        .tag-product { background: rgba(124,58,237,0.15); color: #b794f4; }
+        .tag-research { background: rgba(0,131,143,0.15); color: #5cd6e0; }
+        .tag-other { background: rgba(255,255,255,0.06); color: #888; }
+        .tag-domestic { background: rgba(207,19,34,0.15); color: #ff7875; }
+        .tag-emoji { font-size: 15px; line-height: 1; }
         .card-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: #e8e8ed;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             line-height: 1.5;
         }
-        .card-title .carrot { margin-right: 4px; }
         .card-summary {
-            font-size: 13.5px;
-            color: #a0a0b0;
-            line-height: 1.75;
-            margin-bottom: 14px;
+            font-size: 13px;
+            color: #8888a0;
+            line-height: 1.7;
+            margin-bottom: 12px;
         }
         .card-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 11px;
-            color: #aaa;
         }
         .card-source {
+            font-size: 11px;
+            color: #555570;
+            background: rgba(255,255,255,0.04);
+            padding: 2px 10px;
+            border-radius: 8px;
+        }
+        .card-score {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b35, #ffa751);
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
             padding: 2px 10px;
             border-radius: 10px;
+            margin-left: auto;
+        }
+        .card-ratings {
             font-size: 11px;
-            font-weight: 500;
+            color: #666680;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            padding: 6px 10px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
         }
-        .source-domestic {
-            background: #2a1520;
-            color: #ff7875;
-        }
-        .source-international {
-            background: #151e2a;
-            color: #69b1ff;
-        }
-        .card-arrow {
-            color: #6a6a80;
-            font-size: 14px;
-        }
+        .card-arrow { color: #ff6b35; font-size: 13px; opacity: 0.6; }
         .footer {
             text-align: center;
-            color: rgba(255,255,255,0.35);
-            padding: 36px 0;
-            font-size: 13px;
-        }
-        .footer .sources-list {
-            margin-top: 10px;
+            color: rgba(255,255,255,0.2);
+            padding: 36px 0 20px;
             font-size: 12px;
         }
-        .footer .domestic-sources { color: #ff7875; opacity: 0.7; }
-        .footer .international-sources { color: #69b1ff; opacity: 0.7; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="logo">🥕</div>
-            <h1>AI-Scream-2026-03-31</h1>
-            <div class="subtitle">每日AI行业资讯精选 | 国内外全覆盖</div>
-            <div class="stats">
-                <span class="stat">11 条精选</span>
-                <span class="stat">4 个来源</span>
-                <span class="stat stat-international">🌐 国际 5 条</span>
-                <span class="stat stat-domestic">🇨🇳 国内 6 条</span>
+            <h1>AI-Scream</h1>
+            <div class="subtitle">2026-03-31 | 每日精选 · 用最少时间掌握AI最新动态</div>
+        </div>
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('international')">🌐 国际资讯<span class="tab-count">5</span></div>
+            <div class="tab" onclick="switchTab('domestic')">🇨🇳 国内资讯<span class="tab-count">2</span></div>
+        </div>
+        <div id="tab-international" class="tab-content active">
+            <div class="cards-grid">
+<a class="card" href="https://www.railsreviews.com/skills" target="_blank" rel="noopener">
+<div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-other">产品</span><span class="tag tag-other">开源</span></div>
+<div class="card-title">Anthropic发布Cowork：非程序员也能用的AI文件管理Agent</div>
+<div class="card-summary">Anthropic推出全新AI文件管理工具Cowork，旨在降低普通用户使用AI技术的门槛。值得关注因其有望扩大AI应用范围。</div>
+<div class="card-source">Hacker News</div>
+</a>
+<a class="card" href="https://techcrunch.com/2026/03/30/ai-chip-startup-rebellions-raises-400-million-at-2-3b-valuation-in-pre-ipo-round/" target="_blank" rel="noopener">
+<div class="tags"><span class="tag-emoji">💰</span> <span class="tag tag-other">融资</span><span class="tag tag-other">大模型</span></div>
+<div class="card-title">Rebellions获4亿美元融资挑战英伟达主导地位</div>
+<div class="card-summary">专注于AI推理芯片设计的初创公司Rebellions完成4亿美元Pre-IPO轮融资，估值达23亿美元。此轮融资显示了市场对AI芯片技术的高度关注和投资热情。</div>
+<div class="card-source">TechCrunch</div>
+</a>
+<a class="card" href="https://www.theverge.com/podcast/902264/oktas-ceo-is-betting-big-on-ai-agent-identity" target="_blank" rel="noopener">
+<div class="tags"><span class="tag-emoji">📊</span> <span class="tag tag-other">技术突破</span><span class="tag tag-other">金融</span></div>
+<div class="card-title">复杂金融工作流程自动化：多模态AI框架应用</div>
+<div class="card-summary">金融机构正通过采用强大的多模态AI框架来自动化复杂的财务工作流程，解决从非结构化文档中提取文本的难题。此技术突破有助于提高金融行业的运营效率和准确性。</div>
+<div class="card-source">The Verge</div>
+</a>
+<a class="card" href="https://www.artificialintelligence-news.com/news/automating-complex-finance-workflows-with-multimodal-ai/" target="_blank" rel="noopener">
+<div class="tags"><span class="tag-emoji">🔥</span> <span class="tag tag-other">融资</span><span class="tag tag-other">ToB</span></div>
+<div class="card-title">智能体收入增长68%：港股AI公司靠「关系」赢得市场</div>
+<div class="card-summary">港股某AI公司在企业服务领域取得显著成绩，其收入增长68%，成为行业标杆。此案例展示了在ToB市场中建立良好合作关系的重要性。</div>
+<div class="card-source">AI News</div>
+</a>
+<a class="card" href="https://chinai.substack.com/p/chinai-352-a-10000-character-treatise" target="_blank" rel="noopener">
+<div class="tags"><span class="tag-emoji">💡</span> <span class="tag tag-other">产品</span><span class="tag tag-other">开源</span></div>
+<div class="card-title">OpenAI关停Sora：日烧百万美元用户不到50万</div>
+<div class="card-summary">由于成本高昂且用户规模有限，OpenAI决定关闭其Sora服务。此事件揭示了初创公司在资源分配和市场定位上的挑战。</div>
+<div class="card-source">ChinAI</div>
+</a>
             </div>
         </div>
-        <div class="cards-grid">
-            <a class="card card-domestic" href="https://www.qbitai.com/2026/03/393864.html" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🌱</span> <span class="tag tag-open">开源</span></div>
-                <div class="card-title">2700GB高质量数据，训出空间智能SOTA，背后秘诀全栈开源</div>
-                <div class="card-summary">300万对RGB-D数据，专治机器人看不清</div>
-                <div class="card-meta">
-                    <span class="card-source source-domestic">🇨🇳 量子位</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card card-domestic" href="https://www.qbitai.com/2026/03/393856.html" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">💰</span> <span class="tag tag-biz">融资</span><span class="tag tag-domestic">国产AI</span></div>
-                <div class="card-title">玻色量子完成10亿元B轮融资，“十五五”规划专用量子计算机赛道唯一代表！</div>
-                <div class="card-summary">中国唯一“通用+专用”量子计算并行</div>
-                <div class="card-meta">
-                    <span class="card-source source-domestic">🇨🇳 量子位</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card card-domestic" href="https://www.qbitai.com/2026/03/393645.html" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🧠</span> <span class="tag tag-llm">Agent</span></div>
-                <div class="card-title">Meta华人实习生搞出超级智能体！自己写代码实现自我进化</div>
-                <div class="card-summary">Agent实现改进方法的自我迭代</div>
-                <div class="card-meta">
-                    <span class="card-source source-domestic">🇨🇳 量子位</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card card-domestic" href="https://www.qbitai.com/2026/03/393631.html" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">💡</span> <span class="tag tag-product">应用</span></div>
-                <div class="card-title">2026科创合伙人大会成功举办！构建科创合伙人生态，激活高质量发展新动能</div>
-                <div class="card-summary">促进产研融合落地</div>
-                <div class="card-meta">
-                    <span class="card-source source-domestic">🇨🇳 量子位</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card card-domestic" href="https://36kr.com/p/3746281380348680" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🇨🇳</span> <span class="tag tag-domestic">国产AI</span></div>
-                <div class="card-title">阿里最强全模态模型登场，实测看懂50分钟《老友记》，全球评测215项SOTA</div>
-                <div class="card-summary">来源：36氪</div>
-                <div class="card-meta">
-                    <span class="card-source source-domestic">🇨🇳 36氪</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card card-domestic" href="https://36kr.com/p/3746281180836360" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">💰</span> <span class="tag tag-biz">融资</span></div>
-                <div class="card-title">硅谷最火少年：被哥大开除、在亚马逊面试作弊，19岁少年5个月融资500万美元</div>
-                <div class="card-summary">来源：36氪</div>
-                <div class="card-meta">
-                    <span class="card-source source-domestic">🇨🇳 36氪</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card card-international" href="https://github.com/drona23/claude-token-efficient" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span><span class="tag tag-domestic">国产AI</span></div>
-                <div class="card-title">阿里发布最强全模态模型</div>
-                <div class="card-summary">阿里推出全球评测215项SOTA的全模态模型，实测能看懂《老友记》。这标志着AI技术在多模态理解上的重大突破。</div>
-                <div class="card-meta">
-                    <span class="card-source source-international">🌐 Hacker News</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card card-international" href="https://github.com/google-research/timesfm" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🔬</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-llm">Agent</span></div>
-                <div class="card-title">Meta实习生研发智能体实现自我进化</div>
-                <div class="card-summary">Meta华人实习生开发的智能体能够自我迭代改进方法，展示了AI自学习能力的新进展。</div>
-                <div class="card-meta">
-                    <span class="card-source source-international">🌐 Hacker News</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card card-international" href="https://github.com/virpo/pegboard" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">💡</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">创作</span><span class="tag tag-llm">Agent</span></div>
-                <div class="card-title">OpenAI关停Sora项目：日烧百万美元，用户不到50万</div>
-                <div class="card-summary">OpenAI宣布停止Sora项目，尽管投入巨大但效果不佳，显示了AI项目的高风险性。</div>
-                <div class="card-meta">
-                    <span class="card-source source-international">🌐 Hacker News</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card card-international" href="https://techcrunch.com/2026/03/30/ai-work-boss-supervisor-us-quinnipiac-poll/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🔥</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span></div>
-                <div class="card-title">Mistral AI完成8.3亿美元融资，在欧洲建超算中心</div>
-                <div class="card-summary">Mistral AI获得巨额融资，并在欧洲建立超级计算中心，这将加速其技术发展和市场扩张。</div>
-                <div class="card-meta">
-                    <span class="card-source source-international">🌐 TechCrunch</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card card-international" href="https://techcrunch.com/2026/03/30/popular-ai-gateway-startup-litellm-ditches-controversial-startup-delve/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🚨</span> <span class="tag tag-llm">大模型</span><span class="tag tag-policy">安全</span></div>
-                <div class="card-title">LiteLLM弃用争议性公司Delve</div>
-                <div class="card-summary">LiteLLM因Delve的恶意软件攻击而放弃合作，显示出AI初创公司在安全合规上的挑战。</div>
-                <div class="card-meta">
-                    <span class="card-source source-international">🌐 TechCrunch</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
+        <div id="tab-domestic" class="tab-content">
+            <div class="cards-grid">
+<a class="card" href="https://www.qbitai.com/2026/03/393984.html" target="_blank" rel="noopener">
+<div class="tags"><span class="tag-emoji">🔍</span> <span class="tag tag-other">产品</span><span class="tag tag-other">安全</span></div>
+<div class="card-title">Okta CEO押注AI代理身份管理</div>
+<div class="card-summary">Okta CEO表示将大力投资AI在身份管理中的应用，以应对企业日益复杂的安全需求。此动向预示着AI技术将在企业管理中扮演重要角色。</div>
+<div class="card-source">量子位</div>
+</a>
+<a class="card" href="https://www.qbitai.com/2026/03/393941.html" target="_blank" rel="noopener">
+<div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-research">研究</span></div>
+<div class="card-title">实测拿215项SOTA的Qwen3.5-Omni：摄像头一开，AI给我现场讲论文、撸代码</div>
+<div class="card-summary">能看能听能唠嗑，还能现场vibe coding</div>
+<div class="card-source">量子位</div>
+</a>
+            </div>
         </div>
         <div class="footer">
-            🥕 由 AI-Scream 自动生成 | 2026-03-31
-            <div class="sources-list">
-                <span class="international-sources">🌐 Hacker News · TechCrunch</span>
-                <br>
-                <span class="domestic-sources">🇨🇳 36氪 · 量子位</span>
-            </div>
+            🥕 AI-Scream · 自动生成 | 2026-03-31
         </div>
     </div>
+    <script>
+    function switchTab(tab) {
+        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+        document.getElementById('tab-' + tab).classList.add('active');
+        event.target.closest('.tab').classList.add('active');
+    }
+    </script>
 </body>
 </html>
