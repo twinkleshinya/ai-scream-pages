@@ -47,7 +47,6 @@
             font-size: 13px;
             color: rgba(255,255,255,0.7);
         }
-        /* ✅ 新增：分类过滤按钮样式 */
         .category-filters {
             display: flex;
             justify-content: center;
@@ -136,11 +135,9 @@
             font-size: 16px;
             line-height: 1;
         }
-        /* ✅ 新增：Web3 / 机器人 / 工具标签样式 */
         .tag-web3 { background: #fef3c7; color: #92400e; }
         .tag-robot { background: #dbeafe; color: #1e40af; }
         .tag-tools { background: #ecfdf5; color: #065f46; }
-        /* ✅ 新增：分类标签样式 */
         .cat-tag {
             font-size: 10px;
             padding: 2px 8px;
@@ -185,7 +182,6 @@
             color: #6a6a80;
             font-size: 14px;
         }
-        /* ✅ 新增：分类统计条 */
         .category-stats {
             display: flex;
             justify-content: center;
@@ -216,17 +212,16 @@
             <h1>AI-Scream-2026-04-01</h1>
             <div class="subtitle">每日AI行业资讯精选 | 中英文全球覆盖</div>
             <div class="stats">
-                <span class="stat">18 条精选</span>
+                <span class="stat">20 条精选</span>
                 <span class="stat">来源 36Kr / 机器之心 / TechCrunch / HN / TLDR / InfoQ / ScienceDaily</span>
             </div>
             <div class="category-stats">
                 <span class="cat-stat">🛠️ 工具/Web3 <span class="count">1</span></span>
-                <span class="cat-stat">🧠 大模型/AGI <span class="count">13</span></span>
-                <span class="cat-stat">⚙️ 硬核分析 <span class="count">1</span></span>
-                <span class="cat-stat">📰 综合 <span class="count">3</span></span>
+                <span class="cat-stat">🧠 大模型/AGI <span class="count">14</span></span>
+                <span class="cat-stat">⚙️ 硬核分析 <span class="count">0</span></span>
+                <span class="cat-stat">📰 综合 <span class="count">5</span></span>
             </div>
         </div>
-        <!-- ✅ 新增：分类过滤按钮 -->
         <div class="category-filters">
             <span class="cat-btn active" data-cat="all" onclick="filterCards('all')">📋 全部</span>
             <span class="cat-btn" data-cat="tools_web3" onclick="filterCards('tools_web3')">🛠️ 工具/Web3</span>
@@ -235,32 +230,37 @@
             <span class="cat-btn" data-cat="general" onclick="filterCards('general')">📰 综合</span>
         </div>
         <div class="cards-grid">
+            <a class="card featured" href="https://ccunpacked.dev/" target="_blank" rel="noopener" data-category="llm_agi">
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-llm">大模型</span></div>
+                <div class="card-title">Claude Code Unpacked : A visual guide</div>
+                <div class="card-summary">HN Score: 364 | Comments: 90</div>
+                <div class="card-meta">
+                    <span class="card-source">Hacker News</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
             <a class="card featured" href="https://36kr.com/newsflashes/210932" target="_blank" rel="noopener" data-category="tools_web3">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-tools">工具/Web3</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-policy">政策</span><span class="tag tag-web3">Web3</span></div>
-                <div class="card-title">阿里与德清共建数字乡村，AI助力农业升级</div>
-                <div class="card-summary">• 推动物联网、区块链应用
-• 培育乡村信息化人才
-• 推进行业监管数字化</div>
+                <div class="tags"><span class="tag-emoji">🏛</span> <span class="cat-tag cat-tools">工具/Web3</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-policy">政策</span><span class="tag tag-web3">Web3</span></div>
+                <div class="card-title">阿里巴巴和浙江德清签署“数字乡村建设合作协议”</div>
+                <div class="card-summary">36氪获悉，4月11日，阿里巴巴和浙江省德清县人民政府签署“数字乡村建设合作协议”，双方将在五方面展开合作：建设数字乡村数据库；扩大物联网、区块链、云计算、人工智能在乡村的应用；培育乡村新零售；培育乡村信息化人才；推进行业监管数字化。</div>
                 <div class="card-meta">
                     <span class="card-source">36Kr</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card featured" href="https://36kr.com/p/3747666107036166" target="_blank" rel="noopener" data-category="llm_agi">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-llm">大模型</span><span class="tag tag-open">开源</span><span class="tag tag-policy">安全</span></div>
-                <div class="card-title">Harness开源，AI界新宠直接暴露</div>
-                <div class="card-summary">• 开源代码泄露，开发者狂欢
-• 影响深远，替代品涌现</div>
+            <a class="card featured" href="https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/" target="_blank" rel="noopener" data-category="llm_agi">
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-llm">大模型</span></div>
+                <div class="card-title">The Claude Code Source Leak: fake tools, frustration regexes, undercover mode</div>
+                <div class="card-summary">HN Score: 1163 | Comments: 464</div>
                 <div class="card-meta">
-                    <span class="card-source">36Kr</span>
+                    <span class="card-source">Hacker News</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card featured" href="https://36kr.com/p/3747613204627968" target="_blank" rel="noopener" data-category="llm_agi">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-llm">大模型</span><span class="tag tag-open">开源</span></div>
-                <div class="card-title">Claude源码被克隆，Anthropic封杀失败</div>
-                <div class="card-summary">• 全网疯狂复制Claude代码
-• Anthropic封堵无效</div>
+            <a class="card" href="https://36kr.com/p/3747947088003588" target="_blank" rel="noopener" data-category="llm_agi">
+                <div class="tags"><span class="tag-emoji">🚀</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-product">产品</span></div>
+                <div class="card-title">行业突发：AI三大原则发布，科技新时代到来</div>
+                <div class="card-summary">行业突发：AI三大原则发布，科技新时代到来</div>
                 <div class="card-meta">
                     <span class="card-source">36Kr</span>
                     <span class="card-arrow">→</span>
@@ -268,123 +268,116 @@
             </a>
             <a class="card" href="https://techcrunch.com/2026/03/31/exclusive-runway-launches-10m-fund-builders-program-to-support-early-stage-ai-startups/" target="_blank" rel="noopener" data-category="general">
                 <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-general">综合</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-product">产品</span></div>
-                <div class="card-title">Runway推出10M基金支持AI初创</div>
-                <div class="card-summary">• 为视频模型创业公司提供资金
-• 推动实时互动视频应用</div>
+                <div class="card-title">Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups</div>
+                <div class="card-summary">Runway is launching a $10 million fund and startup program to back companies building with its AI video models, as it pushes toward interactive, real-time “video intelligence” applications.</div>
                 <div class="card-meta">
                     <span class="card-source">TechCrunch</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://36kr.com/p/3747726516601353" target="_blank" rel="noopener" data-category="llm_agi">
+            <a class="card" href="https://36kr.com/p/3747994426897156" target="_blank" rel="noopener" data-category="general">
+                <div class="tags"><span class="tag-emoji">🌱</span> <span class="cat-tag cat-general">综合</span> <span class="tag tag-open">开源</span></div>
+                <div class="card-title">2000万人围观，React大佬开源神作“干翻”前端，速度飙500倍，狂揽2.8万颗星</div>
+                <div class="card-summary">2000万人围观，React大佬开源神作“干翻”前端，速度飙500倍，狂揽2.8万颗星</div>
+                <div class="card-meta">
+                    <span class="card-source">36Kr</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html" target="_blank" rel="noopener" data-category="llm_agi">
                 <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span></div>
-                <div class="card-title">OpenAI焦虑背后：硅谷史上最大笔投资</div>
-                <div class="card-summary">• 拿到巨额投资，OpenAI却更焦虑了
-• 可能与行业竞争加剧有关</div>
-                <div class="card-meta">
-                    <span class="card-source">36Kr</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://www.qbitai.com/2026/03/393883.html" target="_blank" rel="noopener" data-category="hardcore">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-hardcore">硬核分析</span> <span class="tag tag-product">产品</span><span class="tag tag-robot">机器人</span></div>
-                <div class="card-title">瑞声科技发布机器人感知方案，加速业务落地</div>
-                <div class="card-summary">• 推出人形机器人感知解决方案
-• 展示公司在机器人领域的综合能力</div>
-                <div class="card-meta">
-                    <span class="card-source">量子位</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://36kr.com/newsflashes/210920" target="_blank" rel="noopener" data-category="llm_agi">
-                <div class="tags"><span class="tag-emoji">🌍</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-product">产品</span></div>
-                <div class="card-title">苹果谷歌联手抗疫，互操作工具上线</div>
-                <div class="card-summary">• 5月起iOS与Android可互通追踪病毒
-• 公共卫生应用将登陆两大应用商店
-• 打工人需留意新功能可能带来的变化</div>
-                <div class="card-meta">
-                    <span class="card-source">36Kr</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/" target="_blank" rel="noopener" data-category="llm_agi">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-llm">大模型</span><span class="tag tag-policy">安全</span></div>
-                <div class="card-title">Claude代码泄露，假工具惹麻烦</div>
-                <div class="card-summary">• 假工具引发用户不满
-• 正则表达式模式被曝光</div>
+                <div class="card-title">OpenAI closes funding round at an $852B valuation</div>
+                <div class="card-summary">HN Score: 445 | Comments: 384</div>
                 <div class="card-meta">
                     <span class="card-source">Hacker News</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://36kr.com/p/3747738485015044" target="_blank" rel="noopener" data-category="llm_agi">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-other">AI</span></div>
-                <div class="card-title">AI接管代码80%，Karpathy揭秘AGI魔法</div>
-                <div class="card-summary">• 打工人注意，代码被AI取代
-• 直接整合AI技术进开发流程</div>
+            <a class="card" href="https://36kr.com/p/3747766248293127" target="_blank" rel="noopener" data-category="llm_agi">
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-llm">大模型</span><span class="tag tag-policy">政策</span></div>
+                <div class="card-title">Anthropic被逼急了，亲生龙虾意外曝光，Karpathy：这就是Claude Claw</div>
+                <div class="card-summary">Anthropic被逼急了，亲生龙虾意外曝光，Karpathy：这就是Claude Claw</div>
                 <div class="card-meta">
                     <span class="card-source">36Kr</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://www.qbitai.com/2026/04/394177.html" target="_blank" rel="noopener" data-category="llm_agi">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-llm">大模型</span></div>
-                <div class="card-title">Claude乱扣费最高20倍</div>
-                <div class="card-summary">• 一句「你好」多收13%额度
-• Code接近不可用状态</div>
+            <a class="card" href="https://36kr.com/newsflashes/210920" target="_blank" rel="noopener" data-category="llm_agi">
+                <div class="tags"><span class="tag-emoji">🚀</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-product">产品</span></div>
+                <div class="card-title">苹果与谷歌联手，打造应用追踪新冠病毒传播</div>
+                <div class="card-summary">4月11日凌晨消息，苹果公司和Alphabet旗下谷歌公司周五宣布，两家公司将合作提供帮助追踪新冠病毒传播的工具。苹果公司称，这两家公司都将在5月推出“使用公共卫生当局的应用以实现Android和iOS设备互操作性”的API（应用程序界面）开发者工具，届时这些应用将会登陆iTunes App Store和Google Play Store。（新浪科技）</div>
                 <div class="card-meta">
-                    <span class="card-source">量子位</span>
+                    <span class="card-source">36Kr</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://36kr.com/p/3747660619203335" target="_blank" rel="noopener" data-category="llm_agi">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-llm">大模型</span><span class="tag tag-policy">政策</span><span class="tag tag-product">产品</span></div>
-                <div class="card-title">Anthropic自研Claude Code，电脑使用迎新变革</div>
-                <div class="card-summary">• Anthropic推出自家代码编辑器
-• 正式进入电脑应用领域
-• 打工人迎来新工具</div>
+            <a class="card" href="https://36kr.com/p/3747857631200004" target="_blank" rel="noopener" data-category="llm_agi">
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-llm">大模型</span></div>
+                <div class="card-title">Claude终于承认乱扣费，最高多收你20倍，一句「你好」干掉13%额度</div>
+                <div class="card-summary">Claude终于承认乱扣费，最高多收你20倍，一句「你好」干掉13%额度</div>
+                <div class="card-meta">
+                    <span class="card-source">36Kr</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://prismml.com/" target="_blank" rel="noopener" data-category="llm_agi">
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-llm">大模型</span></div>
+                <div class="card-title">Show HN: 1-Bit Bonsai, the First Commercially Viable 1-Bit LLMs</div>
+                <div class="card-summary">HN Score: 246 | Comments: 106</div>
+                <div class="card-meta">
+                    <span class="card-source">Hacker News</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://36kr.com/p/3747777476702726" target="_blank" rel="noopener" data-category="llm_agi">
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-llm">大模型</span></div>
+                <div class="card-title">中国 AI 公司，该怎么「抄 Claude Code 的作业」？</div>
+                <div class="card-summary">中国 AI 公司，该怎么「抄 Claude Code 的作业」？</div>
                 <div class="card-meta">
                     <span class="card-source">36Kr</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
             <a class="card" href="https://www.qbitai.com/2026/03/394014.html" target="_blank" rel="noopener" data-category="llm_agi">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-product">产品</span><span class="tag tag-tools">工具</span></div>
-                <div class="card-title">TRAE SOLO独立端上线：写代码跨界干啥？</div>
-                <div class="card-summary">• 新功能助力开发者跨领域应用
-• 打工人注意：AI工具再添新技能</div>
+                <div class="tags"><span class="tag-emoji">🚀</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-product">产品</span></div>
+                <div class="card-title">刚刚，TRAE SOLO上线独立端：已经不满足写代码，还要跨界干活！</div>
+                <div class="card-summary">刚刚，TRAE SOLO上线独立端：已经不满足写代码，还要跨界干活！</div>
                 <div class="card-meta">
                     <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://ccunpacked.dev/" target="_blank" rel="noopener" data-category="llm_agi">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span><span class="tag tag-tools">工具</span></div>
-                <div class="card-title">Claude Code揭秘：视觉指南上线</div>
-                <div class="card-summary">• OpenAI发布Claude代码详解图解
-• 开发者可直观了解内部机制</div>
-                <div class="card-meta">
-                    <span class="card-source">Hacker News</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
             <a class="card" href="https://36kr.com/newsflashes/210937" target="_blank" rel="noopener" data-category="general">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-general">综合</span> <span class="tag tag-product">产品</span></div>
-                <div class="card-title">字节跳动加码中小企业复苏计划</div>
-                <div class="card-summary">• 补贴力度增至2亿元
-• 累计投入超4.3亿元助企
-• 抗疫支出超10亿元</div>
+                <div class="tags"><span class="tag-emoji">🚀</span> <span class="cat-tag cat-general">综合</span> <span class="tag tag-product">产品</span></div>
+                <div class="card-title">持续助力中小企业复苏，字节跳动抗疫支出超10亿元</div>
+                <div class="card-summary">36氪获悉，4月11日，字节跳动旗下的抖音、巨量引擎推出第二期“中小企业复苏计划”，在原计划的基础上，将补贴力度增加至2亿元，助力中小企业更快恢复经营。除中小企业复苏计划外，字节跳动已累计推出了12项针对各行各业的扶助措施，整体投入超4.3亿元。在之前，字节跳动在资助抗疫一线医护人员方面的投入已超3.8亿元。</div>
                 <div class="card-meta">
                     <span class="card-source">36Kr</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
+            <a class="card" href="https://techcrunch.com/2026/03/29/soras-shutdown-could-be-a-reality-check-moment-for-ai-video/" target="_blank" rel="noopener" data-category="llm_agi">
+                <div class="tags"><span class="tag-emoji">🎨</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-product">创作</span></div>
+                <div class="card-title">Sora’s shutdown could be a reality check moment for AI video</div>
+                <div class="card-summary">Is this just normal corporate strategy, or are we about to see a broader pullback on AI-generated video?</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
             <a class="card" href="https://36kr.com/newsflashes/210949" target="_blank" rel="noopener" data-category="general">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-general">综合</span> <span class="tag tag-other">基础设施</span></div>
-                <div class="card-title">中芯国际&amp;嘉楠科技合作矿机芯片量产在即</div>
-                <div class="card-summary">• 14nm矿机芯片完成测试，二季度量产出货
-• 双方合作始于2019年底，但受行情影响
-• 中芯国际多次尝试进入矿机行业未果</div>
+                <div class="tags"><span class="tag-emoji">⚙️</span> <span class="cat-tag cat-general">综合</span> <span class="tag tag-other">基础设施</span></div>
+                <div class="card-title">中芯国际与嘉楠科技合作14nm矿机芯片，知情人士：能否量产要看行情</div>
+                <div class="card-summary">有消息称，中芯国际与嘉楠科技合作的14nm矿机芯片已完成测试，将在今年二季度量产出货。对此，知情人士称，双方合作始于2019年年底，但能否量产要看行情。据悉，中芯国际数次尝试进入矿机行业，但受行情拖累一直未有实质进展。（财联社）</div>
+                <div class="card-meta">
+                    <span class="card-source">36Kr</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://36kr.com/newsflashes/210918" target="_blank" rel="noopener" data-category="general">
+                <div class="tags"><span class="tag-emoji">🔒</span> <span class="cat-tag cat-general">综合</span> <span class="tag tag-policy">安全</span></div>
+                <div class="card-title">比尔·盖茨：美国经济无法恢复至疫情前，新冠疫苗至少要等18个月</div>
+                <div class="card-summary">4月11日消息，微软联合创始人比尔·盖茨（Bill Gates）最新接受美国媒体采访时表示，他预计学校会在今年秋天复课，但美国经济无法神奇地恢复到新冠疫情爆发前的水平，而美国目前疫情仍然没有达到高峰。在盖茨看来，美国人可能要到2021年秋天才能“完全安全”，不再受到新冠病毒的影响。（腾讯科技）</div>
                 <div class="card-meta">
                     <span class="card-source">36Kr</span>
                     <span class="card-arrow">→</span>
@@ -392,30 +385,26 @@
             </a>
             <a class="card" href="https://www.qbitai.com/2026/03/394135.html" target="_blank" rel="noopener" data-category="llm_agi">
                 <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-llm">大模型</span></div>
-                <div class="card-title">智谱财报爆表，国内大模型收入冠军</div>
-                <div class="card-summary">• 营收超7.24亿元，领跑国内大模型公司
-• MaaS业务表现亮眼</div>
+                <div class="card-title">智谱上市后首份财报：超7.24亿元！国内收入最高大模型公司，MaaS发力了</div>
+                <div class="card-summary">智谱上市后首份财报：超7.24亿元！国内收入最高大模型公司，MaaS发力了</div>
                 <div class="card-meta">
                     <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
             <a class="card" href="https://www.qbitai.com/2026/03/393941.html" target="_blank" rel="noopener" data-category="llm_agi">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-product">产品</span><span class="tag tag-research">研究</span></div>
-                <div class="card-title">Qwen3.5-Omni上线：AI现场讲论文撸代码</div>
-                <div class="card-summary">• 摄像头一开，AI就能唠嗑coding
-• 功能强大，涵盖看听聊
-• 直接整合进日常开发</div>
+                <div class="tags"><span class="tag-emoji">🔬</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-research">研究</span></div>
+                <div class="card-title">实测拿215项SOTA的Qwen3.5-Omni：摄像头一开，AI给我现场讲论文、撸代码</div>
+                <div class="card-summary">能看能听能唠嗑，还能现场vibe coding</div>
                 <div class="card-meta">
                     <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://techcrunch.com/2026/03/29/soras-shutdown-could-be-a-reality-check-moment-for-ai-video/" target="_blank" rel="noopener" data-category="llm_agi">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-product">创作</span></div>
-                <div class="card-title">Sora关停或成AI视频转折点</div>
-                <div class="card-summary">• AI视频生成领域或将迎来调整
-• 企业策略还是行业趋势？</div>
+            <a class="card" href="https://techcrunch.com/2026/03/31/mercor-says-it-was-hit-by-cyberattack-tied-to-compromise-of-open-source-litellm-project/" target="_blank" rel="noopener" data-category="llm_agi">
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="cat-tag cat-llm">大模型/AGI</span> <span class="tag tag-llm">大模型</span><span class="tag tag-open">开源</span><span class="tag tag-policy">安全</span></div>
+                <div class="card-title">Mercor says it was hit by cyberattack tied to compromise of open-source LiteLLM project</div>
+                <div class="card-summary">The AI recruiting startup confirmed a security incident after an extortion hacking crew took credit for stealing data from the company&#x27;s systems.</div>
                 <div class="card-meta">
                     <span class="card-source">TechCrunch</span>
                     <span class="card-arrow">→</span>
@@ -426,7 +415,6 @@
             🥕 由 AI-Scream 自动生成 | 2026-04-01
         </div>
     </div>
-    <!-- ✅ 新增：分类过滤JS -->
     <script>
         function filterCards(cat) {
             document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
