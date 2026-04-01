@@ -78,6 +78,10 @@
             border: 1px solid rgba(255, 165, 0, 0.3);
             background: linear-gradient(135deg, #16161e 0%, #1a1a28 100%);
         }
+        .card.unverified {
+            opacity: 0.85;
+            border: 1px solid rgba(255, 255, 0, 0.15);
+        }
         .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; align-items: center; }
         .tag {
             font-size: 11px;
@@ -149,105 +153,159 @@
             <h1>AI-Scream-2026-04-01</h1>
             <div class="subtitle">每日AI行业资讯精选 | 中英文全球覆盖</div>
             <div class="stats">
-                <span class="stat">11 条精选</span>
-                <span class="stat">来源 微博 / 知乎 / 36Kr / 机器之心 / TechCrunch / HN</span>
+                <span class="stat">17 条精选</span>
+                <span class="stat">来源 36Kr / 机器之心 / TechCrunch / HN / TLDR</span>
             </div>
         </div>
         <div class="cards-grid">
             <a class="card featured" href="https://www.qbitai.com/2026/04/394169.html" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">💰</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span></div>
-                <div class="card-title">OpenAI获史上最大单笔融资，金额达122亿美元</div>
-                <div class="card-summary">OpenAI完成122亿美元的巨额融资，创下历史纪录。此轮融资将进一步推动其在人工智能领域的研究与开发，对全球AI行业产生深远影响。</div>
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span></div>
+                <div class="card-title">1220亿美元！OpenAI创下史上最大单笔融资纪录</div>
+                <div class="card-summary">OpenAI创下史上最大单笔融资纪录</div>
                 <div class="card-meta">
                     <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card featured" href="https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">💰</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span></div>
-                <div class="card-title">OpenAI完成8520亿美元估值融资</div>
-                <div class="card-summary">TechCrunch报道，OpenAI完成了30亿美元的融资，估值达到8520亿美元，并接近IPO。这表明投资者对人工智能领域的巨大信心。</div>
-                <div class="card-meta">
-                    <span class="card-source">Hacker News</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card featured" href="https://36kr.com/p/3747613204627968" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🚨</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-llm">大模型</span><span class="tag tag-open">开源</span></div>
-                <div class="card-title">Claude Code源码泄露，Anthropic封杀失败</div>
-                <div class="card-summary">技术专家通过逆向工程成功克隆Anthropic的闭源产品Claude Code源代码，涉及4756个文件。此事件揭示了顶级AI产品的内部结构，引发行业广泛关注与讨论。</div>
-                <div class="card-meta">
-                    <span class="card-source">36Kr</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🚀</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-policy">政策</span></div>
-                <div class="card-title">OpenAI完成30亿美元融资：估值达1220亿美元</div>
-                <div class="card-summary">TechCrunch报道，OpenAI完成了30亿美元的融资，由亚马逊、英伟达和软银领投，估值达到1220亿美元。这表明市场对人工智能技术的巨大需求与投资热情。</div>
+            <a class="card featured" href="https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-policy">政策</span></div>
+                <div class="card-title">OpenAI, not yet public, raises $3B from retail investors in monster $122B fund raise</div>
+                <div class="card-summary">OpenAI完成1220亿美元融资，估值8520亿美元，并接近IPO。本轮由亚马逊、英伟达和软银领投。</div>
                 <div class="card-meta">
                     <span class="card-source">TechCrunch</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://techcrunch.com/2026/03/29/soras-shutdown-could-be-a-reality-check-moment-for-ai-video/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🎥</span> <span class="tag tag-product">创作</span></div>
-                <div class="card-title">Sora关闭：AI视频生成工具的现实检查</div>
-                <div class="card-summary">TechCrunch报道了OpenAI关闭其AI视频生成工具Sora，仅上线半年就遭遇用户骤减和运营成本高昂的问题。这引发了对AI视频生成领域的反思。</div>
-                <div class="card-meta">
-                    <span class="card-source">TechCrunch</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://36kr.com/p/3747570385257225" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">📞</span> <span class="tag tag-biz">融资</span></div>
-                <div class="card-title">前百度高管创立AI语音创业公司估值110亿</div>
-                <div class="card-summary">20人团队打造能打电话的AI产品，估值达110亿元人民币。此事件展示了AI技术在日常生活中的应用潜力及其商业价值。</div>
-                <div class="card-meta">
-                    <span class="card-source">36Kr</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://techcrunch.com/2026/03/31/exclusive-runway-launches-10m-fund-builders-program-to-support-early-stage-ai-startups/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🛠️</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-product">产品</span></div>
-                <div class="card-title">Runway推出1000万美元基金与初创计划</div>
-                <div class="card-summary">TechCrunch报道，Runway推出了一个价值1000万美元的基金和创业项目，旨在支持使用其AI视频模型的早期阶段公司。这展示了行业内的合作与竞争态势。</div>
+            <a class="card featured" href="https://techcrunch.com/2026/03/31/exclusive-runway-launches-10m-fund-builders-program-to-support-early-stage-ai-startups/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-featured">🔥 重磅</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-product">产品</span></div>
+                <div class="card-title">Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups</div>
+                <div class="card-summary">Runway启动1000万美元基金及创业项目，旨在支持使用其AI视频模型的早期阶段公司，推动交互式实时“视频智能”应用的发展。</div>
                 <div class="card-meta">
                     <span class="card-source">TechCrunch</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
             <a class="card" href="https://www.qbitai.com/2026/03/394149.html" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🚀</span> <span class="tag tag-biz">融资</span></div>
-                <div class="card-title">理想智驾创始人联手阿里前副总裁创业估值超10亿美元</div>
-                <div class="card-summary">理想智驾原一号位与阿里前副总裁携手创立新公司，仅注册十天即获得超高估值。此事件显示了AI领域人才和资源的高价值及合作潜力。</div>
+                <div class="tags"><span class="tag-emoji">💰</span> <span class="tag tag-biz">融资</span></div>
+                <div class="card-title">公司注册10天，估值逾10亿美元！理想智驾大牛刷出具身创投新热度</div>
+                <div class="card-summary">理想前智驾一号位和阿里前副总裁携手创业</div>
                 <div class="card-meta">
                     <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🔍</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-product">产品</span></div>
-                <div class="card-title">OpenAI关闭Sora：背后原因揭秘</div>
-                <div class="card-summary">TechCrunch独家报道了OpenAI关闭其AI视频生成工具Sora的原因，质疑是正常的商业策略还是更广泛的AI视频领域收缩的信号。这揭示了市场动态与技术决策的关系。</div>
+            <a class="card" href="https://techcrunch.com/2026/03/29/soras-shutdown-could-be-a-reality-check-moment-for-ai-video/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🎥</span> <span class="tag tag-product">创作</span></div>
+                <div class="card-title">Sora’s shutdown could be a reality check moment for AI video</div>
+                <div class="card-summary">Sora在发布六个月后关闭，引发关于AI生成视频是否即将缩减的疑问。</div>
                 <div class="card-meta">
                     <span class="card-source">TechCrunch</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://36kr.com/newsflashes/210932" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🏠</span> <span class="tag tag-policy">政策</span></div>
-                <div class="card-title">阿里巴巴与德清共建数字乡村合作协议签署</div>
-                <div class="card-summary">阿里巴巴与浙江德清县政府合作建设数字乡村项目，涉及数据库、物联网等多个领域。此举旨在通过数字化手段推动乡村振兴和经济发展。</div>
+            <a class="card" href="https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🚨</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-product">产品</span></div>
+                <div class="card-title">OpenAI关闭Sora引发争议</div>
+                <div class="card-summary">OpenAI在六个月内关闭其AI视频生成工具Sora，引起对其数据收集目的的怀疑。</div>
                 <div class="card-meta">
-                    <span class="card-source">36Kr</span>
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">💰</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span></div>
+                <div class="card-title">OpenAI closes funding round at an $852B valuation</div>
+                <div class="card-summary">OpenAI完成1220亿美元融资，估值8520亿美元，较之前宣布的1100亿美元有所增加。</div>
+                <div class="card-meta">
+                    <span class="card-source">Hacker News</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.qbitai.com/2026/03/394014.html" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🚀</span> <span class="tag tag-product">产品</span></div>
+                <div class="card-title">刚刚，TRAE SOLO上线独立端：已经不满足写代码，还要跨界干活！</div>
+                <div class="card-summary">PC和Web两端齐发</div>
+                <div class="card-meta">
+                    <span class="card-source">量子位</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.qbitai.com/2026/03/393864.html" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🌱</span> <span class="tag tag-open">开源</span></div>
+                <div class="card-title">2700GB高质量数据，训出空间智能SOTA，背后秘诀全栈开源</div>
+                <div class="card-summary">300万对RGB-D数据，专治机器人看不清</div>
+                <div class="card-meta">
+                    <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
             <a class="card" href="https://techcrunch.com/2026/03/30/ai-chip-startup-rebellions-raises-400-million-at-2-3b-valuation-in-pre-ipo-round/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">💰</span> <span class="tag tag-biz">融资</span><span class="tag tag-other">基础设施</span></div>
-                <div class="card-title">Rebellions获4亿美元Pre-IPO融资：挑战英伟达主导地位</div>
-                <div class="card-summary">TechCrunch报道，专注于设计AI推理芯片的初创公司Rebellions获得了4亿美元的Pre-IPO轮融资，估值达到23亿美元。这表明市场对AI芯片技术的重视与竞争加剧。</div>
+                <div class="tags"><span class="tag-emoji">⚡</span> <span class="tag tag-biz">融资</span><span class="tag tag-other">基础设施</span></div>
+                <div class="card-title">AI chip startup Rebellions raises $400 million at $2.3B valuation in pre-IPO round</div>
+                <div class="card-summary">专注于AI推理芯片设计的初创公司Rebellions完成4亿美元融资，估值23亿美元，并计划年内上市。</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://techcrunch.com/2026/03/31/yupp-ai-shuts-down-33m-a16z-crypto-chris-dixon/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">💸</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-product">产品</span></div>
+                <div class="card-title">Yupp shuts down after raising $33M from a16z crypto’s Chris Dixon</div>
+                <div class="card-summary">Yupp在获得a16z加密基金克里斯·迪克森投资3300万美元后不到一年，宣布关闭业务。</div>
+                <div class="card-meta">
+                    <span class="card-source">TechCrunch</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.qbitai.com/2026/03/394135.html" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span></div>
+                <div class="card-title">智谱上市后首份财报：超7.24亿元！国内收入最高大模型公司，MaaS发力了</div>
+                <div class="card-summary">提出新概念：Token架构力</div>
+                <div class="card-meta">
+                    <span class="card-source">量子位</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.qbitai.com/2026/03/394011.html" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🏛</span> <span class="tag tag-policy">政策</span><span class="tag tag-product">产品</span><span class="tag tag-llm">Agent</span></div>
+                <div class="card-title">ClawTip来了！ 京东科技首发推出AI智能体的“专属自主零钱包”</div>
+                <div class="card-summary">AI智能体之间真正自主支付的钱包，来了！</div>
+                <div class="card-meta">
+                    <span class="card-source">量子位</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.qbitai.com/2026/03/393984.html" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🧠</span> <span class="tag tag-llm">Agent</span></div>
+                <div class="card-title">智能体收入暴增68%！这家港股AI公司靠「关系」驯服企业龙虾</div>
+                <div class="card-summary">ToB AI最贵重的门票</div>
+                <div class="card-meta">
+                    <span class="card-source">量子位</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.qbitai.com/2026/03/393941.html" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🔬</span> <span class="tag tag-research">研究</span></div>
+                <div class="card-title">实测拿215项SOTA的Qwen3.5-Omni：摄像头一开，AI给我现场讲论文、撸代码</div>
+                <div class="card-summary">能看能听能唠嗑，还能现场vibe coding</div>
+                <div class="card-meta">
+                    <span class="card-source">量子位</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.qbitai.com/2026/03/393887.html" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">✨</span> <span class="tag tag-other">AI</span></div>
+                <div class="card-title">机器人线下真机对线打PK！这届黑客松可太会玩了</div>
+                <div class="card-summary">以赛促研、以研促产</div>
+                <div class="card-meta">
+                    <span class="card-source">量子位</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://techcrunch.com/2026/03/30/qodo-bets-on-code-verification-as-ai-coding-scales-raises-70m/" target="_blank" rel="noopener">
+                <div class="tags"><span class="tag-emoji">🔍</span> <span class="tag tag-biz">融资</span></div>
+                <div class="card-title">Qodo raises $70M for code verification as AI coding scales</div>
+                <div class="card-summary">AI编程普及背景下，Qodo获得7000万美元融资，专注于代码验证以确保其正确性。</div>
                 <div class="card-meta">
                     <span class="card-source">TechCrunch</span>
                     <span class="card-arrow">→</span>
