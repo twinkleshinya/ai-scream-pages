@@ -7,7 +7,8 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                         "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
             background: #0a0a0f;
             min-height: 100vh;
             padding: 24px 16px;
@@ -37,6 +38,7 @@
             justify-content: center;
             gap: 24px;
             margin-top: 18px;
+            flex-wrap: wrap;
         }
         .stat {
             background: rgba(255,255,255,0.08);
@@ -68,11 +70,29 @@
             color: inherit;
             display: block;
             border: 1px solid rgba(255,255,255,0.06);
+            position: relative;
         }
         .card:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 36px rgba(0,0,0,0.5);
             border-color: rgba(255,255,255,0.12);
+        }
+        .source-badge {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        .badge-intl {
+            background: rgba(26, 115, 232, 0.15);
+            color: #4a9eff;
+        }
+        .badge-domestic {
+            background: rgba(255, 107, 107, 0.15);
+            color: #ff6b6b;
         }
         .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; align-items: center; }
         .tag {
@@ -89,6 +109,7 @@
         .tag-product { background: #f3e8fd; color: #7c3aed; }
         .tag-research { background: #e0f7fa; color: #00838f; }
         .tag-other { background: #f5f5f5; color: #666666; }
+        .tag-domestic { background: #ffe8e8; color: #d93025; }
         .tag-emoji {
             font-size: 16px;
             line-height: 1;
@@ -99,8 +120,8 @@
             color: #e8e8ed;
             margin-bottom: 10px;
             line-height: 1.5;
+            padding-right: 50px;
         }
-        .card-title .carrot { margin-right: 4px; }
         .card-summary {
             font-size: 13.5px;
             color: #a0a0b0;
@@ -138,133 +159,108 @@
         <div class="header">
             <div class="logo">🥕</div>
             <h1>AI-Scream-2026-04-02</h1>
-            <div class="subtitle">每日AI行业资讯精选 | 用最少的时间掌握最新动态</div>
+            <div class="subtitle">每日AI行业资讯精选 | 国内外多源聚合 | 用最少的时间掌握最新动态</div>
             <div class="stats">
-                <span class="stat">13 条精选</span>
-                <span class="stat">来源 TechCrunch / HN / TLDR</span>
+                <span class="stat">9 条精选</span>
+                <span class="stat">🌐 3 条国际</span>
+                <span class="stat">🇨🇳 6 条国内</span>
+                <span class="stat">5 个来源</span>
             </div>
         </div>
         <div class="cards-grid">
-            <a class="card" href="https://build.ms/2026/4/1/the-claude-code-leak/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span></div>
-                <div class="card-title">Claude代码泄露事件：Anthropic误删GitHub仓库</div>
-                <div class="card-summary">Anthropic因代码泄露事件误删数千GitHub仓库，后承认是操作失误并撤销删除。事件暴露AI企业源码安全与开源社区的复杂关系，引发行业对代码管理规范的讨论。</div>
+            <a class="card" href="https://cursor.com/?utm_source=tldr_paid&amp;amp;utm_medium=paid&amp;amp;utm_campaign=ai" target="_blank" rel="noopener">
+                <span class="source-badge badge-intl">🌐</span>
+                <div class="tags"><span class="tag-emoji">💻</span> <span class="tag tag-product">产品</span></div>
+                <div class="card-title">Cursor发布免费AI开发工具</div>
+                <div class="card-summary">Cursor提供免费API和SDK，助力开发者快速构建AI应用，降低门槛。</div>
                 <div class="card-meta">
-                    <span class="card-source">Hacker News</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://old.reddit.com/r/programming/comments/1s9jkzi/announcement_temporary_llm_content_ban/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🧠</span> <span class="tag tag-llm">大模型</span><span class="tag tag-policy">政策</span></div>
-                <div class="card-title">编程论坛禁谈LLM开发：AI技术讨论受限</div>
-                <div class="card-summary">Reddit编程板块全面禁止LLM编程讨论，引发开发者对AI技术开放性的担忧。此举可能阻碍AI技术共享，但论坛方称需平衡创新与安全风险。</div>
-                <div class="card-meta">
-                    <span class="card-source">Hacker News</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://github.com/OrionsLock/SALOMI" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🧮</span> <span class="tag tag-research">研究</span></div>
-                <div class="card-title">极端低比特量化研究：AI模型效率突破</div>
-                <div class="card-summary">Salomi项目实现Transformer模型极端低比特量化，可显著降低AI推理成本。该技术对边缘计算和AI部署具有重要价值，推动模型轻量化发展。</div>
-                <div class="card-meta">
-                    <span class="card-source">Hacker News</span>
+                    <span class="card-source">TLDR</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
             <a class="card" href="https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🔐</span> <span class="tag tag-llm">大模型</span><span class="tag tag-open">开源</span></div>
-                <div class="card-title">Anthropic代码泄露事件：误删引发安全争议</div>
-                <div class="card-summary">Anthropic为应对代码泄露误删GitHub仓库，后承认操作失误。事件凸显AI企业源码保护与开源社区的矛盾，暴露AI技术安全治理的挑战。</div>
-                <div class="card-meta">
-                    <span class="card-source">TechCrunch</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://techcrunch.com/2026/04/01/metas-natural-gas-binge-could-power-south-dakota/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🏭</span> <span class="tag tag-other">基础设施</span></div>
-                <div class="card-title">Meta建天然气电站：AI数据中心能源革命</div>
-                <div class="card-summary">Meta为Hyperion AI数据中心建设10座天然气电站，引发环保争议。此举反映AI算力需求与传统能源的冲突，推动数据中心能源结构转型。</div>
+                <span class="source-badge badge-intl">🌐</span>
+                <div class="tags"><span class="tag-emoji">🚨</span> <span class="tag tag-llm">大模型</span><span class="tag tag-open">开源</span></div>
+                <div class="card-title">Anthropic移除泄露代码库</div>
+                <div class="card-summary">Anthropic因代码泄露事件移除数千个GitHub仓库，此举可能影响开源社区及技术交流。</div>
                 <div class="card-meta">
                     <span class="card-source">TechCrunch</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
             <a class="card" href="https://techcrunch.com/2026/04/01/cognichip-wants-ai-to-design-the-chips-that-power-ai-and-just-raised-60m-to-try/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🧠</span> <span class="tag tag-biz">融资</span><span class="tag tag-other">基础设施</span></div>
-                <div class="card-title">Cognichip获6000万美元：AI芯片设计革命</div>
-                <div class="card-summary">Cognichip获6000万美元融资，计划用AI设计AI芯片，可降低75%开发成本。该技术将加速AI芯片迭代，重塑半导体行业生态。</div>
+                <span class="source-badge badge-intl">🌐</span>
+                <div class="tags"><span class="tag-emoji">💡</span> <span class="tag tag-biz">融资</span><span class="tag tag-other">基础设施</span></div>
+                <div class="card-title">Cognichip研发AI芯片设计技术</div>
+                <div class="card-summary">Cognichip公司通过AI优化芯片设计流程，有望大幅降低成本并缩短开发周期。</div>
                 <div class="card-meta">
                     <span class="card-source">TechCrunch</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://techcrunch.com/2026/03/31/mercor-says-it-was-hit-by-cyberattack-tied-to-compromise-of-open-source-litellm-project/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🛡️</span> <span class="tag tag-llm">大模型</span><span class="tag tag-open">开源</span><span class="tag tag-policy">安全</span></div>
-                <div class="card-title">AI招聘公司遭网络攻击：开源项目成突破口</div>
-                <div class="card-summary">Mercor因开源LiteLLM项目遭黑客攻击，数据泄露事件暴露AI企业安全漏洞。开源生态与AI技术的结合需更严格的安全防护机制。</div>
+            <a class="card" href="https://www.qbitai.com/2026/04/394620.html" target="_blank" rel="noopener">
+                <span class="source-badge badge-domestic">🇨🇳</span>
+                <div class="tags"><span class="tag-emoji">🔍</span> <span class="tag tag-llm">大模型</span></div>
+                <div class="card-title">千问AI眼镜首次OTA升级</div>
+                <div class="card-summary">千问AI眼镜进行首次在线更新，增强其实用功能和用户体验，推动AR技术落地应用。</div>
                 <div class="card-meta">
-                    <span class="card-source">TechCrunch</span>
+                    <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://techcrunch.com/2026/03/31/salesforce-announces-an-ai-heavy-makeover-for-slack-with-30-new-features/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">💼</span> <span class="tag tag-product">产品</span></div>
-                <div class="card-title">Salesforce升级Slack：AI功能全面渗透</div>
-                <div class="card-summary">Salesforce为Slack新增30项AI功能，提升协作效率。此举标志着AI技术在企业办公场景的深度应用，推动生产力工具智能化转型。</div>
+            <a class="card" href="https://www.qbitai.com/2026/04/394616.html" target="_blank" rel="noopener">
+                <span class="source-badge badge-domestic">🇨🇳</span>
+                <div class="tags"><span class="tag-emoji">💡</span> <span class="tag tag-llm">大模型</span></div>
+                <div class="card-title">豆包大模型开启公测</div>
+                <div class="card-summary">豆包大模型日均使用量超120万亿Token，面向企业用户开放测试，推动AI技术商业化进程。</div>
                 <div class="card-meta">
-                    <span class="card-source">TechCrunch</span>
+                    <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">💰</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-policy">政策</span></div>
-                <div class="card-title">OpenAI获30亿美元融资：AI行业估值新高</div>
-                <div class="card-summary">OpenAI获零售投资者30亿美元融资，估值达8520亿美元。该轮融资由亚马逊、英伟达等巨头领投，预示AI行业资本热度持续升温。</div>
+            <a class="card" href="https://www.qbitai.com/2026/04/394606.html" target="_blank" rel="noopener">
+                <span class="source-badge badge-domestic">🇨🇳</span>
+                <div class="tags"><span class="tag-emoji">🔧</span> <span class="tag tag-open">开源</span></div>
+                <div class="card-title">清华研发智能调度员开源</div>
+                <div class="card-summary">清华大学开发的智能调度系统降低龙虾养殖成本58%，促进农业智能化发展。</div>
                 <div class="card-meta">
-                    <span class="card-source">TechCrunch</span>
+                    <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://techcrunch.com/2026/03/31/yupp-ai-shuts-down-33m-a16z-crypto-chris-dixon/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🛑</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-product">产品</span></div>
-                <div class="card-title">AI模型反馈公司Yupp关闭：AI创业风险凸显</div>
-                <div class="card-summary">Yupp在获3300万美元融资后仅一年关闭，反映AI初创企业生存压力。该事件警示AI行业需更谨慎的商业模式验证。</div>
+            <a class="card" href="https://www.ithome.com/0/935/309.htm" target="_blank" rel="noopener">
+                <span class="source-badge badge-domestic">🇨🇳</span>
+                <div class="tags"><span class="tag-emoji">🤝</span> <span class="tag tag-policy">安全</span></div>
+                <div class="card-title">IBM与Arm合作开发双架构硬件</div>
+                <div class="card-summary">IBM和Arm联手打造新型计算平台，提升AI和数据密集型工作负载处理能力。</div>
                 <div class="card-meta">
-                    <span class="card-source">TechCrunch</span>
+                    <span class="card-source">IT之家</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://techcrunch.com/2026/03/31/alexa-plus-new-food-ordering-experiences-with-uber-eats-and-grubhub/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🍽️</span> <span class="tag tag-other">AI</span></div>
-                <div class="card-title">Alexa+整合外卖服务：AI语音交互升级</div>
-                <div class="card-summary">亚马逊推出Alexa+外卖功能，模拟餐厅点餐体验。该功能通过AI语音技术提升用户交互体验，推动智能家居场景落地。</div>
+            <a class="card" href="https://www.ithome.com/0/935/304.htm" target="_blank" rel="noopener">
+                <span class="source-badge badge-domestic">🇨🇳</span>
+                <div class="tags"><span class="tag-emoji">📊</span> <span class="tag tag-other">AI</span></div>
+                <div class="card-title">SEMI预测未来四年晶圆厂设备支出增长</div>
+                <div class="card-summary">预计全球300mm晶圆厂设备支出将持续增加，2027年将首次超过1500亿美元。</div>
                 <div class="card-meta">
-                    <span class="card-source">TechCrunch</span>
+                    <span class="card-source">IT之家</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
-            <a class="card" href="https://techcrunch.com/2026/03/31/nomadic-raises-8-4-million-to-wrangle-the-data-pouring-off-avs/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🚗</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-llm">Agent</span></div>
-                <div class="card-title">Nomadic获840万美元：自动驾驶数据处理创新</div>
-                <div class="card-summary">Nomadic通过深度学习模型处理自动驾驶数据，构建结构化数据集。该技术可加速自动驾驶研发，推动AI与汽车行业的深度融合。</div>
+            <a class="card" href="https://www.aihub.cn/go/doubao" target="_blank" rel="noopener">
+                <span class="source-badge badge-domestic">🇨🇳</span>
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-product">产品</span></div>
+                <div class="card-title">豆包推出免费AI助手</div>
+                <div class="card-summary">豆包提供免费的AI助手服务，帮助企业或个人提高工作效率和生产力。</div>
                 <div class="card-meta">
-                    <span class="card-source">TechCrunch</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://techcrunch.com/2026/03/31/exclusive-runway-launches-10m-fund-builders-program-to-support-early-stage-ai-startups/" target="_blank" rel="noopener">
-                <div class="tags"><span class="tag-emoji">🚀</span> <span class="tag tag-llm">大模型</span><span class="tag tag-biz">融资</span><span class="tag tag-product">产品</span></div>
-                <div class="card-title">Runway推出1000万美元基金：扶持AI初创企业</div>
-                <div class="card-summary">Runway推出1000万美元基金及创业计划，支持AI视频初创公司。此举旨在推动视频智能应用发展，加速AI技术商业化进程。</div>
-                <div class="card-meta">
-                    <span class="card-source">TechCrunch</span>
+                    <span class="card-source">新智元</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
         </div>
         <div class="footer">
-            🥕 由 AI-Scream 自动生成 | 2026-04-02
+            🥕 由 AI-Scream v2.0 自动生成 | 2026-04-02 | 国内外 5 源聚合
         </div>
     </div>
 </body>
