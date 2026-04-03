@@ -53,6 +53,16 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 18px;
         }
+        .section-header {
+            grid-column: 1 / -1;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #e8e8ed;
+            padding: 28px 0 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+        }
         @media (max-width: 640px) {
             .cards-grid { grid-template-columns: 1fr; }
             .header h1 { font-size: 1.8em; }
@@ -161,18 +171,19 @@
             <h1>AI-Scream-2026-04-03</h1>
             <div class="subtitle">每日AI行业资讯精选 | 国内外多源聚合 | 用最少的时间掌握最新动态</div>
             <div class="stats">
-                <span class="stat">13 条精选</span>
-                <span class="stat">🌐 8 条国际</span>
-                <span class="stat">🇨🇳 5 条国内</span>
+                <span class="stat">14 条精选</span>
+                <span class="stat">🌐 8 条国外</span>
+                <span class="stat">🇨🇳 6 条国内</span>
                 <span class="stat">5 个来源</span>
             </div>
         </div>
         <div class="cards-grid">
+            <div class="section-header">🌐 国外</div>
             <a class="card" href="https://qwen.ai/blog?id=qwen3.6" target="_blank" rel="noopener">
                 <span class="source-badge badge-intl">🌐</span>
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span><span class="tag tag-llm">Agent</span></div>
-                <div class="card-title">通义千问发布Qwen3.6-Plus：迈向现实世界智能体</div>
-                <div class="card-summary">通义实验室推出Qwen3.6-Plus，强化现实场景交互能力，支持多模态复杂任务，为开发者提供更强大的AI工具，推动AI技术在实际应用中的落地。</div>
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span><span class="tag tag-research">研究</span></div>
+                <div class="card-title">通义千问Qwen3.6-Plus发布：迈向真实世界智能体</div>
+                <div class="card-summary">Hacker News热议的Qwen3.6-Plus版本聚焦多模态能力与复杂任务处理，其突破性在于实现更接近人类认知的智能体交互。该版本将为国内开发者提供更强大的AI工具，推动从实验室场景向真实世界应用的跨越。</div>
                 <div class="card-meta">
                     <span class="card-source">Hacker News</span>
                     <span class="card-arrow">→</span>
@@ -181,8 +192,8 @@
             <a class="card" href="https://lemonade-server.ai" target="_blank" rel="noopener">
                 <span class="source-badge badge-intl">🌐</span>
                 <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-open">开源</span><span class="tag tag-product">产品</span></div>
-                <div class="card-title">AMD推出开源本地LLM服务器Lemonade：GPU/NPU加速，性能突出</div>
-                <div class="card-summary">AMD推出基于GPU和NPU的开源本地LLM服务器Lemonade，可显著降低大模型部署门槛。该产品或为中国开发者提供高性能本地化AI解决方案参考，加速企业级AI应用落地。</div>
+                <div class="card-title">AMD推出开源本地LLM服务器：GPU/NPU加速，助力开发者降本增效</div>
+                <div class="card-summary">AMD推出基于GPU和NPU的开源本地LLM服务器Lemonade，支持快速部署和低延迟推理。该产品通过开源降低AI开发门槛，或将推动中国开发者更广泛采用本地化AI部署方案，减少对云端算力的依赖。</div>
                 <div class="card-meta">
                     <span class="card-source">Hacker News</span>
                     <span class="card-arrow">→</span>
@@ -190,9 +201,9 @@
             </a>
             <a class="card" href="https://openai.com/index/openai-acquires-tbpn/" target="_blank" rel="noopener">
                 <span class="source-badge badge-intl">🌐</span>
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-other">基础设施</span><span class="tag tag-domestic">国产AI</span></div>
-                <div class="card-title">OpenAI收购TBPN：强化AI技术布局</div>
-                <div class="card-summary">OpenAI宣布收购TBPN，此举或将加速其在AI基础技术领域的研发进度。该交易可能影响全球AI算力分配格局，中国开发者或将面临更激烈的国际竞争压力。</div>
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-research">研究</span><span class="tag tag-domestic">国产AI</span></div>
+                <div class="card-title">OpenAI收购TBPN：战略升级引发行业关注</div>
+                <div class="card-summary">OpenAI收购神秘初创公司TBPN，据推测其在AI基础模型领域有核心技术储备。此次收购或加速OpenAI在通用人工智能领域的布局，可能对中国AI企业形成技术壁垒，倒逼国内厂商加快底层技术突破。</div>
                 <div class="card-meta">
                     <span class="card-source">Hacker News</span>
                     <span class="card-arrow">→</span>
@@ -201,8 +212,8 @@
             <a class="card" href="https://www.theverge.com/ai-artificial-intelligence/904776/anthropic-claude-source-code-leak" target="_blank" rel="noopener">
                 <span class="source-badge badge-intl">🌐</span>
                 <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span><span class="tag tag-policy">安全</span></div>
-                <div class="card-title">Anthropic Claude Code泄露事件：暴露AI‘宠物’与常驻代理功能</div>
-                <div class="card-summary">The Verge报道，Anthropic最新Claude Code更新引发代码泄露，暴露包含Tamagotchi式AI‘宠物’及始终在线代理的源码。事件引发开发者对AI功能安全与隐私保护的担忧，或推动行业加强代码管理规范。</div>
+                <div class="card-title">Anthropic代码泄露：AI‘宠物’与常驻代理功能曝光</div>
+                <div class="card-summary">The Verge披露Anthropic最新Claude Code更新中意外泄露的代码库，包含类似Tamagotchi的AI虚拟宠物模块和7×24小时在线的智能代理系统。该事件暴露AI模型开发中的安全漏洞，可能影响中国开发者对闭源模型的信任度，并引发行业对AI伦理边界的讨论</div>
                 <div class="card-meta">
                     <span class="card-source">The Verge</span>
                     <span class="card-arrow">→</span>
@@ -211,38 +222,18 @@
             <a class="card" href="https://www.wired.com/story/cusor-launches-coding-agent-openai-anthropic/" target="_blank" rel="noopener">
                 <span class="source-badge badge-intl">🌐</span>
                 <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span><span class="tag tag-product">创作</span></div>
-                <div class="card-title">Cursor推出AI编程助手直面Claude与Codex</div>
-                <div class="card-summary">AI编码工具Cursor推出新一代产品，直接与OpenAI和Anthropic展开竞争。该产品可能影响中国市场开发者工具选择，加剧AI编程助手领域的竞争格局。</div>
+                <div class="card-title">Cursor推出新一代AI编码助手，直面Claude Code与Codex竞争</div>
+                <div class="card-summary">Cursor推出集成代码生成与调试的AI代理工具，直接对标OpenAI Codex与Anthropic Claude Code。该产品可能提升开发者效率，加剧AI编码工具市场竞争，为中国开发者提供更多选择。</div>
                 <div class="card-meta">
                     <span class="card-source">Wired</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://www.qbitai.com/2026/04/395210.html" target="_blank" rel="noopener">
-                <span class="source-badge badge-domestic">🇨🇳</span>
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span><span class="tag tag-llm">Agent</span></div>
-                <div class="card-title">小米MiMo大模型推出Token Plan：首购88折，单次订阅满足全模态Agent需求</div>
-                <div class="card-summary">小米MiMo大模型推出Token Plan，单次订阅即可满足全模态Agent任务需求，降低开发者使用门槛。首购享88折优惠，有助于推动AI技术在更多场景的应用落地，加速行业生态建设</div>
-                <div class="card-meta">
-                    <span class="card-source">量子位</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://www.qbitai.com/2026/04/395155.html" target="_blank" rel="noopener">
-                <span class="source-badge badge-domestic">🇨🇳</span>
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-domestic">国产AI</span></div>
-                <div class="card-title">悟空接入阿里Qwen3.6-Plus：国产最强编程模型落地实践</div>
-                <div class="card-summary">悟空率先接入阿里Qwen3.6-Plus，标志着国产最强编程模型在实际场景中的落地。此举展示了大模型与具体应用结合的潜力，有助于推动国内AI技术发展，为开发者提供更强大的工具支持</div>
-                <div class="card-meta">
-                    <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
             <a class="card" href="https://www.theverge.com/tech/905805/google-home-gemini-temperature-controls-lighting" target="_blank" rel="noopener">
                 <span class="source-badge badge-intl">🌐</span>
                 <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span><span class="tag tag-domestic">国产AI</span></div>
-                <div class="card-title">Google Home更新提升Gemini理解能力，智能家居控制更自然</div>
-                <div class="card-summary">Google Home应用最新更新优化Gemini AI助手指令理解能力，使智能家居控制更流畅。该升级或推动中国智能家居开发者加速优化语音交互技术，提升用户体验。</div>
+                <div class="card-title">Google Home更新提升Gemini AI控制体验</div>
+                <div class="card-summary">Google通过Home应用更新优化Gemini AI，使智能家居控制更自然可靠。用户可描述设备类型等指令，可能推动行业交互标准提升，影响中国智能家居开发者技术路线选择</div>
                 <div class="card-meta">
                     <span class="card-source">The Verge</span>
                     <span class="card-arrow">→</span>
@@ -250,19 +241,50 @@
             </a>
             <a class="card" href="https://www.theverge.com/ai-artificial-intelligence/904676/apple-carplay-openai-chatgpt" target="_blank" rel="noopener">
                 <span class="source-badge badge-intl">🌐</span>
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span><span class="tag tag-domestic">国产AI</span></div>
-                <div class="card-title">ChatGPT登陆苹果CarPlay：车载AI交互新体验</div>
-                <div class="card-summary">苹果iOS 26.4系统新增语音交互应用支持，ChatGPT正式接入CarPlay车载系统。该功能将AI对话体验延伸至驾驶场景，可能推动智能语音助手在汽车领域的应用升级，对中国车企的车载系统开发具有参考价值。</div>
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span></div>
+                <div class="card-title">ChatGPT登陆CarPlay：iOS 26.4支持语音交互，或推动车载AI应用落地</div>
+                <div class="card-summary">苹果iOS 26.4系统新增CarPlay语音交互功能，用户可通过最新版ChatGPT应用在车载系统中使用AI对话。该更新或加速AI技术在车载场景的渗透，为国内车企智能化升级提供新方向，同时提升开发者在车载生态中的技术布局价值</div>
                 <div class="card-meta">
                     <span class="card-source">The Verge</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.wired.com/story/anthropic-claude-research-functional-emotions/" target="_blank" rel="noopener">
+                <span class="source-badge badge-intl">🌐</span>
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-research">研究</span><span class="tag tag-domestic">国产AI</span></div>
+                <div class="card-title">Anthropic称Claude具备类人情感：AI情感模拟技术突破</div>
+                <div class="card-summary">Anthropic研究人员发现Claude内部存在类似人类情感的机制，可能推动AI情感计算发展。该技术突破或影响中国AI开发者对情感交互技术的布局，提升人机共情能力在客服、教育等场景的应用潜力</div>
+                <div class="card-meta">
+                    <span class="card-source">Wired</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <div class="section-header">🇨🇳 国内</div>
+            <a class="card" href="https://www.qbitai.com/2026/04/395210.html" target="_blank" rel="noopener">
+                <span class="source-badge badge-domestic">🇨🇳</span>
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span><span class="tag tag-llm">Agent</span></div>
+                <div class="card-title">小米MiMo大模型推出Token Plan：单次订阅满足全模态Agent需求</div>
+                <div class="card-summary">小米MiMo大模型首次推出Token Plan，单次订阅即可满足全模态Agent任务需求，首购享88折优惠。该计划降低开发者使用门槛，或加速AI应用在多场景的落地，对行业形成示范效应</div>
+                <div class="card-meta">
+                    <span class="card-source">量子位</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.qbitai.com/2026/04/395155.html" target="_blank" rel="noopener">
+                <span class="source-badge badge-domestic">🇨🇳</span>
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">创作</span><span class="tag tag-domestic">国产AI</span></div>
+                <div class="card-title">悟空接入阿里最强编程模型Qwen3.6-Plus 推动AI应用落地</div>
+                <div class="card-summary">阿里将Qwen3.6-Plus编程模型接入悟空平台，标志着国产大模型在实际开发场景中的深度应用。该实践通过提升代码生成效率，为AI技术与产业需求的结合提供新范式，加速行业智能化进程。</div>
+                <div class="card-meta">
+                    <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
             <a class="card" href="https://www.qbitai.com/2026/04/395206.html" target="_blank" rel="noopener">
                 <span class="source-badge badge-domestic">🇨🇳</span>
                 <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-product">产品</span><span class="tag tag-research">研究</span></div>
-                <div class="card-title">阿里千问3.6登顶中国最强编程模型，技术实力获权威认可</div>
-                <div class="card-summary">全球权威榜单显示，阿里千问3.6在编程模型测试中表现最佳，标志着中国大模型技术在代码生成领域取得突破。该成果或将推动AI开发工具升级，加速编程领域智能化进程。</div>
+                <div class="card-title">阿里千问3.6登顶全球编程模型榜单，技术实力受认可</div>
+                <div class="card-summary">据量子位报道，阿里通义千问3.6在国际权威大模型盲测中位列中国编程模型榜首，标志着国内大模型技术突破。该成果将推动国内AI编程能力提升，加速行业应用落地。</div>
                 <div class="card-meta">
                     <span class="card-source">量子位</span>
                     <span class="card-arrow">→</span>
@@ -270,29 +292,29 @@
             </a>
             <a class="card" href="https://www.ithome.com/0/935/728.htm" target="_blank" rel="noopener">
                 <span class="source-badge badge-domestic">🇨🇳</span>
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-product">产品</span><span class="tag tag-domestic">国产AI</span></div>
-                <div class="card-title">苹果WWDC 26将发布新一代AI工具，开发者可现场交流</div>
-                <div class="card-summary">苹果将在WWDC 26开发者大会上展示新一代AI工具，为开发者提供技术讲座和与工程师交流机会，推动AI技术在iOS和macOS系统的应用，影响中国开发者生态</div>
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-product">产品</span></div>
+                <div class="card-title">苹果WWDC 26公布新一代AI工具，开发者可现场互动</div>
+                <div class="card-summary">苹果将在WWDC 26开发者大会发布iOS 27/macOS 27系统更新及新一代AI工具，为开发者提供技术讲座与工程师面对面交流机会，加速AI技术在消费级操作系统的应用落地。</div>
                 <div class="card-meta">
                     <span class="card-source">IT之家</span>
-                    <span class="card-arrow">→</span>
-                </div>
-            </a>
-            <a class="card" href="https://www.wired.com/story/anthropic-claude-research-functional-emotions/" target="_blank" rel="noopener">
-                <span class="source-badge badge-intl">🌐</span>
-                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-llm">大模型</span><span class="tag tag-research">研究</span><span class="tag tag-domestic">国产AI</span></div>
-                <div class="card-title">Anthropic称Claude具备类情感机制，或重塑AI伦理边界</div>
-                <div class="card-summary">Anthropic研究发现Claude模型内部存在类情感表示，可能推动情感计算技术突破。该发现或将影响中国AI伦理框架构建，促使开发者重新评估情感模拟技术的边界与风险。</div>
-                <div class="card-meta">
-                    <span class="card-source">Wired</span>
                     <span class="card-arrow">→</span>
                 </div>
             </a>
             <a class="card" href="https://www.ithome.com/0/935/737.htm" target="_blank" rel="noopener">
                 <span class="source-badge badge-domestic">🇨🇳</span>
                 <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-domestic">国产AI</span></div>
-                <div class="card-title">索尼收购AI视觉公司强化PS图形技术，或推动国内游戏开发升级</div>
-                <div class="card-summary">索尼收购专注计算机视觉的Cinemersive Labs，将强化PlayStation图形技术。该团队在AI视觉算法领域积累或加速游戏行业AI应用落地，为中国游戏开发者提供更多技术工具。</div>
+                <div class="card-title">索尼收购AI视觉公司，强化PlayStation图形技术布局</div>
+                <div class="card-summary">索尼收购专注计算机视觉与机器学习的Cinemersive Labs，将其纳入Visual Computing Group。此举将提升PlayStation图形技术实力，可能推动中国游戏开发者在AI视觉交互领域的技术合作机会。</div>
+                <div class="card-meta">
+                    <span class="card-source">IT之家</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a class="card" href="https://www.ithome.com/0/935/781.htm" target="_blank" rel="noopener">
+                <span class="source-badge badge-domestic">🇨🇳</span>
+                <div class="tags"><span class="tag-emoji">🤖</span> <span class="tag tag-product">产品</span><span class="tag tag-product">创作</span></div>
+                <div class="card-title">AI洗稿技术被用于网络造谣，蔚来启动法律追责</div>
+                <div class="card-summary">蔚来法务部披露，犯罪团伙利用AI技术操控4000+账号发布不实信息，累计点击量8000万。案件揭示AI生成内容技术可能被滥用，推动企业加强AI伦理审查与法律维权力度。</div>
                 <div class="card-meta">
                     <span class="card-source">IT之家</span>
                     <span class="card-arrow">→</span>
